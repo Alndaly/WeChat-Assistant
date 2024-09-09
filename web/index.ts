@@ -1,27 +1,22 @@
-// Importing Puppeteer library
-import puppeteer from 'puppeteer';
 
-export const scrapeData = async (url: string): Promise<string> => {
-    // Launching Puppeteer
+import puppeteer from 'puppeteer'
+
+
+export const scrapeData = async (url: string) => {
+    // 启动浏览器
     const browser = await puppeteer.launch();
-    // Opening a new page
     const page = await browser.newPage();
 
-    // Navigating to a sample webpage
+    // 访问页面
     await page.goto(url);
 
-    // Extracting sample data using page.evaluate
-    const data = await page.evaluate(() => {
-        // Sample data extraction logic
-        const title = document.title;
-        const body = document.querySelector('body')
-        if (body) {
-            const html = body.innerHTML;
-            return html
-        }
-        // Returning an object containing extracted data
-        return title
+    // 获取页面内容的文本
+    const textContent = await page.evaluate(() => {
+        // 获取整个页面的文本内容
+        return document.body.innerText;
     });
+
+    // 关闭浏览器
     await browser.close();
-    return data;
+    return textContent;
 }

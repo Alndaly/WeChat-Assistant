@@ -17,6 +17,7 @@
     "@notionhq/client": "^2.2.15",
     "@types/qrcode-terminal": "^0.12.2",
     "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.4",
