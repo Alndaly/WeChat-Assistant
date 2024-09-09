@@ -1,9 +1,5 @@
 # 微信Notion助手
 
-> [!WARNING]
-> 文档撰写中，请暂勿使用本项目。
-> 预期完成时间：2024-09-10 12:00:00
-
 ## 安装、配置ollama并启动
 
 详见[ollama](https://github.com/ollama/ollama)项目。
@@ -81,6 +77,8 @@ cp ./env.example ./env
 ```
 
 打开`env`文件，将`NOTION_API_KEY`和`NOTION_DATABASE_ID`的具体内容替换为上文中提到的你的`Notion Api Token`和`Notion Database ID`。
+
+其中的LLM_MODEL对应的是你用来做总结的model（此处仅适配ollama的模型）。
 
 ## 启动
 
