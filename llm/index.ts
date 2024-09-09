@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config();
+
 import axios from "axios";
 import OpenAI from 'openai';
 
@@ -12,7 +15,7 @@ const instance = axios.create({
 export const generateSummaryForWebSite = async (data: string) => {
     // TODO：此处需要配置一些更适合概括网站的模型，或者可以考虑通过正则优化网站内容，使其更符合模型输入要求？
     const res = await instance.post('/generate', {
-        model: 'llama3-chinese',
+        model: process.env['LLM_MODEL'],
         prompt: `我接下来发你的是个网站的html源码，请忽视所有html标签，假设这是一篇文档，请用50个字以内总结这篇文档。${data}`,
         stream: false
     })
