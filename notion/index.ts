@@ -54,7 +54,7 @@ export const addToDatabase = async (title: string, domain: string, url: string |
                 type: 'url',
                 url: url
             },
-            '出版日期': { // Date is formatted as YYYY-MM-DD or null
+            '创建日期': { // Date is formatted as YYYY-MM-DD or null
                 type: 'date',
                 date: date
             },
