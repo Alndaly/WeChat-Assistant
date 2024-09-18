@@ -54,7 +54,7 @@
 ## 克隆项目
 
 ```shell
-git clone https://github.com/Alndaly/WeChat-assistant.git
+git clone https://github.com/Alndaly/WeChat-Assistant.git
 ```
 
 ## 环境配置
@@ -63,7 +63,7 @@ git clone https://github.com/Alndaly/WeChat-assistant.git
 > 如果你没有pnpm的话也可以使用npm或者yarn。
 
 ```shell
-cd WeChat-assistant
+cd WeChat-Assistant
 pnpm i
 ```
 
