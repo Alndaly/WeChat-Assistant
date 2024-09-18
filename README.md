@@ -1,5 +1,11 @@
 # 微信Notion助手
 
+## TODO
+
+- [x] 支持文本消息类型
+- [x] 支持链接消息类型
+- [ ] 支持图片消息类型（ocr+llava）
+
 ## 安装、配置ollama并启动
 
 详见[ollama](https://github.com/ollama/ollama)项目。
